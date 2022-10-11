@@ -1,0 +1,36 @@
+body {
+    font-family: dunbar-tall, sans-serif;
+    margin: 100px;
+    /* background-color: white; */
+    background-image: url('../assets/img/BG-ice2.png');
+    background-size: 100%;
+}
+
+h1 {
+    font-size: 24pt;
+    font-weight: 400;
+    font-style: normal ;
+    text-align: left;
+    color: rgba(32, 43, 29, 10);
+    letter-spacing: 10pt;
+    text-transform: uppercase;
+}
+
+nav {
+    font-size: 18pt;
+    font-weight: 400;
+    font-style: normal ;
+    text-align: left;
+    color: rgba(32, 43, 29, 10);
+    letter-spacing: 8pt;
+    text-transform: uppercase;
+    line-height: 4rem;
+}
+
+ul {list-style: none;}
+
+a {color: rgba(32, 43, 29, 10);}
+
+@media only screen and (max-width: 812px) {  
+    
+}
