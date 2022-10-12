@@ -5,12 +5,12 @@ let Airtable = require("airtable");
 console.log(Airtable);
 
 // connect our airtable base to our website using API key
-let base = new Airtable({ apiKey: "keyHgmsY3PeOahiOd" }).base(
+let base = new Airtable({ apiKey: "key2fjkLzrAFCnstQ" }).base(
     "appkjFKTVoK8Banc1"
 );
 
 //get our airtable data, specify how to retrieve it
-base("ice").select({}).eachPage(gotPageOfIces, gotAllIces);
+base("iceTransformation").select({}).eachPage(gotPageOfIces, gotAllIces);
 
 // an empty array to hold our book data
 // could type in arrays? ["dots" "lines"] but this is left empty

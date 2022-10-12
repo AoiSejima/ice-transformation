@@ -22,14 +22,22 @@ nav {
     font-style: normal ;
     text-align: left;
     color: rgba(32, 43, 29, 10);
-    letter-spacing: 8pt;
+    letter-spacing: 4pt;
     text-transform: uppercase;
-    line-height: 4rem;
+    line-height: 3rem;
+    text-indent: -2.5rem;
 }
 
 ul {list-style: none;}
 
-a {color: rgba(32, 43, 29, 10);}
+a {
+    color: rgba(32, 43, 29, 10);
+    opacity: 0.5;
+    text-decoration: none;
+}
+a:hover {
+    opacity: 1;
+}
 
 @media only screen and (max-width: 812px) {  
     
