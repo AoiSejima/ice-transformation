@@ -10,25 +10,25 @@ let base = new Airtable({ apiKey: "keyHgmsY3PeOahiOd" }).base(
 );
 
 //get our airtable data, specify how to retrieve it
-base("ice").select({}).eachPage(gotPageOfIce, gotAllIce);
+base("ice").select({}).eachPage(gotPageOfIces, gotAllIces);
 
 // an empty array to hold our book data
 // could type in arrays? ["dots" "lines"] but this is left empty
-const ice = [];
+const ices = [];
 
 // callback function that receives our data
-function gotPageOfice(records, fetchNextPage) {
-    console.log("gotPageOfice()");
+function gotPageOfIces(records, fetchNextPage) {
+    console.log("gotPageOfIces()");
     // add the records from this page to our array
     // push is another word for add
-    ice.push(...records);
+    ices.push(...records);
     // request more pages
     fetchNextPage();
 ;}
 
 // call back function that is called when all pages are loaded
-function gotAllIce(err) {
-    console.log("gotAllIce()");
+function gotAllIces(err) {
+    console.log("gotAllIces()");
   
     // report an error, you'd want to do something better than this in production
     if (err) {
@@ -38,51 +38,42 @@ function gotAllIce(err) {
     }
   
     // call functions to log and show the spirals
-    consoleLogIce();
-    showIce();
+    consoleLogIces();
+    showIces();
 };
 
 // just loop through the spirals and console.log them
-function consoleLogice() {
-    console.log("consoleLogIce()");
-    ice.forEach((ice) => {
+function consoleLogIces() {
+    console.log("consoleLogIces()");
+    ices.forEach((ice) => {
       console.log("Ice:", ice);
     });
 };
   
 // loop through airtable data, and display them onto our page
-function showIce() {
-    console.log("showIce()");
-    ice.forEach((ice) => {
+function showIces() {
+    console.log("showIces()");
+    ices.forEach((ice) => {
 
         // creating a new div container, where our info will go
         let iceContainer = document.createElement("div");
         iceContainer.classList.add("ice-container");
         document.querySelector(".js-container").appendChild(iceContainer);
       
-        // let iceTitle = document.createElement("h2");
-        // iceTitle.classList.add("ice-title");
-        // iceTitle.innerText = ice.fields.title;
-        // iceContainer.appendChild(iceTitle);
+        let iceTitle = document.createElement("h2");
+        iceTitle.classList.add("ice-title");
+        iceTitle.innerText = ice.fields.title;
+        iceContainer.appendChild(iceTitle);
 
-        let iceMaterial = document.createElement("h2");
-        iceMaterial.classList.add("ice-material");
-        iceMaterial.innerText = ice.fields.material;
-        iceContainer.appendChild(iceMaterial);
-        
-        let iceTime = document.createElement("p");
+        let iceTime = document.createElement("h2");
         iceTime.classList.add("ice-time");
         iceTime.innerText = ice.fields.time;
         iceContainer.appendChild(iceTime);
 
-        let iceImg = document.createElement("img");
-        iceImg.classList.add("ice-img");
-        iceImg.src = ice.fields.image[0].url;
-        iceContainer.appendChild(iceImg);
-
-        // let iceMaterial = document.createElement("material");
-        // iceMaterial.classList.add("ice-material");
-        // iceContainer.appendChild(iceMaterial);
+        let iceImage = document.createElement("img");
+        iceImage.classList.add("ice-image");
+        iceImage.src = ice.fields.image[0].url;
+        iceContainer.appendChild(iceImage);
 
         // add event lister
         // when user clicks on iceContiner
@@ -90,7 +81,7 @@ function showIce() {
         iceContainer.addEventListener("click", function(){
             // toggle = light switch
             iceTitle.classList.toggle("active");
-            iceImg.classList.toggle("active");
+            iceTime.classList.toggle("active");
         });
 
         // get genre field from airtable, 
