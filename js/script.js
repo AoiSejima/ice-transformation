@@ -6,7 +6,7 @@ console.log(Airtable);
 
 // connect our airtable base to our website using API key
 let base = new Airtable({ apiKey: "key2fjkLzrAFCnstQ" }).base(
-    "appkjFKTVoK8Banc1"
+    "app66e1GvFQ9PnuHC"
 );
 
 //get our airtable data, specify how to retrieve it
@@ -42,6 +42,9 @@ function gotAllIces(err) {
     showIces();
 };
 
+// consoleLogIces();
+// showIces();
+
 // just loop through the spirals and console.log them
 function consoleLogIces() {
     console.log("consoleLogIces()");
@@ -49,7 +52,7 @@ function consoleLogIces() {
       console.log("Ice:", ice);
     });
 };
-  
+
 // loop through airtable data, and display them onto our page
 function showIces() {
     console.log("showIces()");
@@ -65,7 +68,7 @@ function showIces() {
         iceTitle.innerText = ice.fields.title;
         iceContainer.appendChild(iceTitle);
 
-        let iceTime = document.createElement("h2");
+        let iceTime = document.createElement("p");
         iceTime.classList.add("ice-time");
         iceTime.innerText = ice.fields.time;
         iceContainer.appendChild(iceTime);
@@ -187,4 +190,4 @@ function showIces() {
             iceContainer.style.display = "block";
         });
 });
-}
+};
