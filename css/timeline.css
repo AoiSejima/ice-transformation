@@ -80,10 +80,9 @@ li {
 
 .js-filter-material  {
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(11, 1fr);
     grid-column-gap: 50px;
 }
-
 span {
     /* border: solid red 3px;  */
     width: 305px;
@@ -121,38 +120,39 @@ span {
     /* cursor: pointer; */
 }
 
-/* .ice-container {
+.ices-container {
     position: absolute;
-    border: solid orange 3px; 
-    4000-305-50 = 3645
-    width: 3645px;
-    height: auto;
-    margin: 0 355px;
+    width: 100vw;
+    height: 500px;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(10, 1fr);
     grid-gap: 20px;
-} */
-
-/* .img-container {
+}
+.ice-container {
+    width: 100%;
+    height: auto;
+    /* position: absolute; */
+    border: solid orange 3px; 
+    /* margin: 0 355px; */
+}
+.img-container {
     position: relative;
     display: block;
     background: red;
-    width: 4000px;
-    height: auto;
-    margin-left: 355px;
-    margin-bottom: 20px;
+    /* margin-left: 355px;
+    margin-bottom: 20px; */
     float: left;
-} */
+}
 
-.img-container {
+/* .img-container {
     position: absolute;
-    /* border: solid orange 3px;  */
+    border: solid orange 3px; 
     margin: 0 360px;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-column-gap: 50px;
-}
+} */
 .ice_material {
     /* border: solid blue 3px;  */
     width: 305px;
@@ -161,7 +161,7 @@ span {
     grid-template-rows: repeat(10, 1fr);
     grid-row-gap: 20px;
 }
-
+/* 
 .ice-img {
     width: 305px;
     height: 203px;
@@ -171,7 +171,7 @@ img {
     display: block;
     width: 100%;
     height: auto;
-}
+} */
 
 .ice-title {display: none;}
 /* .ice-title.active {display: block;} */

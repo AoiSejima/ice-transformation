@@ -57,21 +57,20 @@ function consoleLogIces() {
 function showIces() {
     console.log("showIces()");
     ices.forEach((ice) => {
-
         // creating a new div container, where our info will go
         let iceContainer = document.createElement("div");
         iceContainer.classList.add("ice-container");
-        document.querySelector(".js-container").appendChild(iceContainer);
+        document.querySelector(".ices-container").appendChild(iceContainer);
       
-        let iceTitle = document.createElement("h2");
-        iceTitle.classList.add("ice-title");
-        iceTitle.innerText = ice.fields.title;
-        iceContainer.appendChild(iceTitle);
+        // let iceTitle = document.createElement("h2");
+        // iceTitle.classList.add("ice-title");
+        // iceTitle.innerText = ice.fields.title;
+        // iceContainer.appendChild(iceTitle);
 
-        let iceTime = document.createElement("p");
-        iceTime.classList.add("ice-time");
-        iceTime.innerText = ice.fields.time;
-        iceContainer.appendChild(iceTime);
+        // let iceTime = document.createElement("p");
+        // iceTime.classList.add("ice-time");
+        // iceTime.innerText = ice.fields.time;
+        // iceContainer.appendChild(iceTime);
 
         let iceImage = document.createElement("img");
         iceImage.classList.add("ice-image");
@@ -81,113 +80,115 @@ function showIces() {
         // add event lister
         // when user clicks on iceContiner
         // other elements will appear or disappear
-        iceContainer.addEventListener("click", function(){
-            // toggle = light switch
-            iceTitle.classList.toggle("active");
-            iceTime.classList.toggle("active");
-        });
+        // iceContainer.addEventListener("click", function(){
+        //     // toggle = light switch
+        //     iceTitle.classList.toggle("active");
+        //     iceTime.classList.toggle("active");
+        // });
 
         // get genre field from airtable, 
         // loop through the array and add each genre as a class to the song container
         let iceMaterial = ice.fields.material;
-        iceMaterial.forEach(function(material){
-        iceContainer.classList.add(material)
+        // console.log(typeof iceMaterial)
+        iceMaterial.forEach(function (m) {
+            iceContainer.classList.add(m);
         });
+ 
 
         // add event listener to filter (to add an active class to ice)
-        let filterCeramicPlate = document.querySelector(".js-ceramicPlate");
-        filterCeramicPlate.addEventListener("click", function(){
+        // let filterCeramicPlate = document.querySelector(".js-ceramicPlate");
+        // filterCeramicPlate.addEventListener("click", function(){
 
-            if (iceContainer.classList.contains("ceramicPlate")) {
-                iceContainer.style.display = "block";
-            } else {
-                iceContainer.style.display = "none";
-            }
-        });
+        //     if (iceContainer.classList.contains("ceramicPlate")) {
+        //         iceContainer.style.display = "block";
+        //     } else {
+        //         iceContainer.style.display = "none";
+        //     }
+        // });
 
-        let filterGlassBottle = document.querySelector(".js-glassBottle");
-        filterGlassBottle.addEventListener("click", function(){
+        // let filterGlassBottle = document.querySelector(".js-glassBottle");
+        // filterGlassBottle.addEventListener("click", function(){
 
-            if (iceContainer.classList.contains("glassBottle")) {
-                iceContainer.style.display = "block";
-            } else {
-                iceContainer.style.display = "none";
-            }
-        });
+        //     if (iceContainer.classList.contains("glassBottle")) {
+        //         iceContainer.style.display = "block";
+        //     } else {
+        //         iceContainer.style.display = "none";
+        //     }
+        // });
 
-        let filterGlassVase = document.querySelector(".js-glassVase");
-        filterGlassVase.addEventListener("click", function(){
+        // let filterGlassVase = document.querySelector(".js-glassVase");
+        // filterGlassVase.addEventListener("click", function(){
 
-            if (iceContainer.classList.contains("glassVase")) {
-                iceContainer.style.display = "block";
-            } else {
-                iceContainer.style.display = "none";
-            }
-        });
+        //     if (iceContainer.classList.contains("glassVase")) {
+        //         iceContainer.style.display = "block";
+        //     } else {
+        //         iceContainer.style.display = "none";
+        //     }
+        // });
 
-        let filterLenineFabric = document.querySelector(".js-lenineFabric");
-        filterLenineFabric.addEventListener("click", function(){
+        // let filterLenineFabric = document.querySelector(".js-lenineFabric");
+        // filterLenineFabric.addEventListener("click", function(){
 
-            if (iceContainer.classList.contains("lenineFabric")) {
-                iceContainer.style.display = "block";
-            } else {
-                iceContainer.style.display = "none";
-            }
-        });
+        //     if (iceContainer.classList.contains("lenineFabric")) {
+        //         iceContainer.style.display = "block";
+        //     } else {
+        //         iceContainer.style.display = "none";
+        //     }
+        // });
 
-        let filterNewspaper = document.querySelector(".js-newspaper");
-        filterNewspaper.addEventListener("click", function(){
+        // let filterNewspaper = document.querySelector(".js-newspaper");
+        // filterNewspaper.addEventListener("click", function(){
 
-            if (iceContainer.classList.contains("newspaper")) {
-                iceContainer.style.display = "block";
-            } else {
-                iceContainer.style.display = "none";
-            }
-        });
+        //     if (iceContainer.classList.contains("newspaper")) {
+        //         iceContainer.style.display = "block";
+        //     } else {
+        //         iceContainer.style.display = "none";
+        //     }
+        // });
 
-        let filterNewsprintPaper = document.querySelector(".js-newsprintPaper");
-        filterNewsprintPaper.addEventListener("click", function(){
+        // let filterNewsprintPaper = document.querySelector(".js-newsprintPaper");
+        // filterNewsprintPaper.addEventListener("click", function(){
 
-            if (iceContainer.classList.contains("newsprintPaper")) {
-                iceContainer.style.display = "block";
-            } else {
-                iceContainer.style.display = "none";
-            }
-        });
+        //     if (iceContainer.classList.contains("newsprintPaper")) {
+        //         iceContainer.style.display = "block";
+        //     } else {
+        //         iceContainer.style.display = "none";
+        //     }
+        // });
 
-        let filterMattePresentationPaper1 = document.querySelector(".js-mattePresentationPaper1");
-        filterMattePresentationPaper1.addEventListener("click", function(){
+        // let filterMattePresentationPaper1 = document.querySelector(".js-mattePresentationPaper1");
+        // filterMattePresentationPaper1.addEventListener("click", function(){
 
-            if (iceContainer.classList.contains("mattePresentationPaper1")) {
-                iceContainer.style.display = "block";
-            } else {
-                iceContainer.style.display = "none";
-            }
-        });
+        //     if (iceContainer.classList.contains("mattePresentationPaper1")) {
+        //         iceContainer.style.display = "block";
+        //     } else {
+        //         iceContainer.style.display = "none";
+        //     }
+        // });
 
-        let filterMattePresentationPaper2 = document.querySelector(".js-mattePresentationPaper2");
-        filterMattePresentationPaper2.addEventListener("click", function(){
+        // let filterMattePresentationPaper2 = document.querySelector(".js-mattePresentationPaper2");
+        // filterMattePresentationPaper2.addEventListener("click", function(){
 
-            if (iceContainer.classList.contains("mattePresentationPaper2")) {
-                iceContainer.style.display = "block";
-            } else {
-                iceContainer.style.display = "none";
-            }
-        });
+        //     if (iceContainer.classList.contains("mattePresentationPaper2")) {
+        //         iceContainer.style.display = "block";
+        //     } else {
+        //         iceContainer.style.display = "none";
+        //     }
+        // });
 
-        let filterMattePresentationPaper3 = document.querySelector(".js-mattePresentationPaper3");
-        filterMattePresentationPaper3.addEventListener("click", function(){
+        // let filterMattePresentationPaper3 = document.querySelector(".js-mattePresentationPaper3");
+        // filterMattePresentationPaper3.addEventListener("click", function(){
 
-            if (iceContainer.classList.contains("mattePresentationPaper3")) {
-                iceContainer.style.display = "block";
-            } else {
-                iceContainer.style.display = "none";
-            }
-        });
+        //     if (iceContainer.classList.contains("mattePresentationPaper3")) {
+        //         iceContainer.style.display = "block";
+        //     } else {
+        //         iceContainer.style.display = "none";
+        //     }
+        // });
 
-        let filterReset = document.querySelector(".js-reset");
-        filterReset.addEventListener("click", function(){
-            iceContainer.style.display = "block";
-        });
+        // let filterReset = document.querySelector(".js-reset");
+        // filterReset.addEventListener("click", function(){
+        //     iceContainer.style.display = "block";
+        // }); 
 });
 };
