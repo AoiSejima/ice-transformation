@@ -1,7 +1,7 @@
 body {
     font-family: dunbar-tall, sans-serif;
     margin: 100px;
-    background-color: black;
+    background-color: rgb(123, 123, 123);
     color: white;
 }
 
@@ -38,154 +38,72 @@ a:hover {
     transition: all 0.2s ease-in-out;
 }
 
-/* nav {
+span {
     font-size: 12pt;
     font-weight: 400;
     font-style: normal ;
-    text-align: center;
-    letter-spacing: 8pt;
+    letter-spacing: 4pt;
     text-transform: uppercase;
+    text-align: center;
 }
-
-ul {
-    list-style: none;
-}
-
-li {
-    width: 30rem;
-    background: red;
-    border: solid blue 5px;
-} */
-
-/* .js-container {
-    border: solid blue 2px; 
-    width: 3200px;
-    height: auto;
-    display: grid;
-    column-gap: 50px;
-    row-gap: 20px;
-    margin: 50px auto;
-} */
-
-/* .js-container {
-    border: solid blue 2px; 
-    width: 3200px;
-    height: auto;
-
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 20px;
-} */
 
 .js-filter-material  {
+    /* border: solid blue 3px; */
     display: grid;
-    grid-template-columns: repeat(11, 1fr);
-    grid-column-gap: 50px;
+    grid-template-columns: repeat(10, 1fr);
+    grid-column-gap: 2vw;
+    margin-left: 15vw;
 }
-span {
-    /* border: solid red 3px;  */
-    width: 305px;
-    height: 86px;
-    font-size: 12pt;
-    font-weight: 400;
-    font-style: normal ;
-    letter-spacing: 4pt;
-    text-transform: uppercase;
-    text-align: center;
-    float: left;
-    /* cursor: pointer; */
+.material {
+    display: inline-block;
+    /* border: solid pink 2px;  */
+    width: 18vw;
+    height: 8vh;
 }
 
-.js-filter-time  {
-    /* border: solid yellow 3px;  */
-    width: 305px;
-    height: auto;
+.js-container {
+    /* border: solid green 2px;  */
     display: grid;
-    grid-template-rows: repeat(10, 1fr);
-    grid-row-gap: 20px;
-    font-size: 12pt;
-    font-weight: 400;
-    font-style: normal;
-    text-align: left;
-    letter-spacing: 4pt;
-    float: left;
+    grid-template-columns: repeat(10, 1fr);
+    /* display: flex;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto; */
+    /* justify-content: center;
+    align-items: center; */
+}
+.js-filter-time  {
+    /* border: solid lightblue 3px;  */
+    width: 15vw;
+    height: auto;
 }
 .time {
+    display: inline-block;
     /* border: solid lightblue 3px;  */
-    width: 305px;
-    /* total height = 203px */
-    height: 107px;
-    padding-top: 96px;
-    /* cursor: pointer; */
+    width: 10vw;
+    height: 12vh;
+    padding-top: 10vh;
+    text-align: left;
+    margin-bottom: 0.5vh;
 }
 
-.ices-container {
-    position: absolute;
-    width: 100vw;
-    height: 500px;
+.imgs-container {
+    /* border: solid orange 3px;  */
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-    grid-gap: 20px;
+    grid-column-gap: 2vw;
 }
-.ice-container {
-    width: 100%;
-    height: auto;
-    /* position: absolute; */
-    border: solid orange 3px; 
-    /* margin: 0 355px; */
-}
-.img-container {
-    position: relative;
-    display: block;
-    background: red;
-    /* margin-left: 355px;
-    margin-bottom: 20px; */
-    float: left;
-}
-
-/* .img-container {
-    position: absolute;
-    border: solid orange 3px; 
-    margin: 0 360px;
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-column-gap: 50px;
-} */
-.ice_material {
-    /* border: solid blue 3px;  */
-    width: 305px;
-    height: auto;
-    display: grid;
-    grid-template-rows: repeat(10, 1fr);
-    grid-row-gap: 20px;
-}
-/* 
 .ice-img {
-    width: 305px;
-    height: 203px;
+    width: 18vw;
+    height: 22vh;
     object-fit: cover;
+    margin-bottom: 0.5vh;
 }
 img {
     display: block;
     width: 100%;
     height: auto;
-} */
-
-.ice-title {display: none;}
-/* .ice-title.active {display: block;} */
-
-/* gem-shape */
-.ice-time {display: none;}
-/* .ice-time.active {display: block;} */
-
-/* gem-color */
-.ice-material {display: none;}
-/* .ice-material.active {display: block;} */
-
-.js-reset {
-    color: rgba(0, 0, 0);
 }
 
 @media only screen and (max-width: 812px) {  
