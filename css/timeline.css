@@ -1,7 +1,7 @@
 body {
     font-family: dunbar-tall, sans-serif;
-    margin: 100px;
-    background-color: rgb(123, 123, 123);
+    margin: 3rem;
+    background-color: black;
     color: white;
 }
 
@@ -12,6 +12,8 @@ h1 {
     text-align: left;
     letter-spacing: 10pt;
     text-transform: uppercase;
+    position:fixed;
+    top: 2vh;
 }
 
 nav {
@@ -23,6 +25,8 @@ nav {
     text-transform: uppercase;
     line-height: 3rem;
     text-indent: -2.5rem;
+    position:fixed;
+    top: 8vh;
 }
 
 ul {list-style: none;}
@@ -53,6 +57,7 @@ span {
     grid-template-columns: repeat(10, 1fr);
     grid-column-gap: 2vw;
     margin-left: 15vw;
+    margin-top: 25vh;
 }
 .material {
     display: inline-block;
@@ -104,6 +109,14 @@ img {
     display: block;
     width: 100%;
     height: auto;
+}
+img:hover {
+    transform: scale(2);
+    transition: all 0.2s ease-in-out;
+}
+
+#rightMargin {
+    margin-right: 2vw;
 }
 
 @media only screen and (max-width: 812px) {  
